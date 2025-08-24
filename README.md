@@ -96,6 +96,7 @@ _"py -m " can be skipped if not using windows or included python into PATH_
 ### compile  
 `py -m pip install pyinstaller`  
 `py -m PyInstaller --onefile hwid-checker.py`  
+`py -m PyInstaller hwid-checker.spec` << this method can eat up to 4-5MB from executable   
   
 ### run  
 `py hwid-checker.py`  
