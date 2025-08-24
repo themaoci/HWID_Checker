@@ -1,7 +1,7 @@
-# HWID_Checker
-Allows you to check your hardware id in multiple places (using only usermode to check)
-
-Info Collected:
+# HWID_Checker  
+Allows you to check your hardware id in multiple places (using only usermode to check)  
+  
+### Info Collected:  
 - PC Name
 - OS
 - MachineGuid
@@ -83,19 +83,20 @@ Info Collected:
   - PNPDeviceID
 - Running Processes (first 30)
 - Is Virtualization Detected (basic method)
-
-### install python 3.13+
-`https://www.python.org/downloads/release/python-3137`
-scroll down and choose proper installation
-
-_"py -m " can be skipped if not using windows or included python into PATH_
-
-### install missing libs
-`py -m pip install tkinter`
-
-### compile
-`py -m pip install pyinstaller`
-`py -m PyInstaller --onefile hwid-checker.py`
-
-### run
-`py hwid-checker.py`
+  
+### install python 3.13+  
+`https://www.python.org/downloads/release/python-3137`  
+scroll down and choose proper installation  
+  
+_"py -m " can be skipped if not using windows or included python into PATH_  
+  
+### install missing libs  
+`py -m pip install tkinter`  
+  
+### compile  
+`py -m pip install pyinstaller`  
+`py -m PyInstaller --onefile hwid-checker.py`  
+  
+### run  
+`py hwid-checker.py`  
+  
