@@ -96,7 +96,7 @@ def get_logical_disk_info():
         for disk in c.Win32_LogicalDisk():
             serial = disk.VolumeSerialNumber
             if serial:
-                disks.append(f"Drive: {disk.DeviceID} VolumeSerial: {serial} FileSystem: {disk.FileSystem} Description: {disk.Description}")
+                disks.append(f"Drive: {disk.DeviceID}\n- VolumeSerial: {serial}\n- FileSystem: {disk.FileSystem}\n- Description: {disk.Description}")
         if disks:
             return "---------- Logical Disk Info (Volume Serials): ----------\n" + "\n".join(disks)
         else:
@@ -129,7 +129,7 @@ def get_ram_info():
         c = wmi.WMI()
         rams = []
         for ram in c.Win32_PhysicalMemory():
-            rams.append(f"Capacity: {int(ram.Capacity)//(1024**3)} GB Manufacturer: {ram.Manufacturer} Speed: {ram.Speed} MHz Serial: {ram.SerialNumber} PartNumber: {ram.PartNumber}")
+            rams.append(f"Capacity: {int(ram.Capacity)//(1024**3)} GB\nManufacturer: {ram.Manufacturer}\nSpeed: {ram.Speed} MHz\nSerial: {ram.SerialNumber}\nPartNumber: {ram.PartNumber}\n")
         return "---------- RAM Info: ----------\n" + "\n".join(rams)
     except Exception as e:
         return f"RAM Error: {e}"
